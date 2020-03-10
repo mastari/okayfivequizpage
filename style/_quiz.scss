@@ -1,0 +1,49 @@
+.contextbarbg {
+  margin-top: $navheight;
+  height: $navheight;
+  background-color: rgb(11, 162, 207);
+}
+
+.contextbar {
+  display: flex;
+  height: $navheight;
+  justify-content: center;
+}
+
+.contextbar>* {
+  color: white;
+  text-decoration: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.returnlesson {
+  font-size: 20px;
+  margin-top: 18px;
+
+  &>div {
+    border: 1px solid white;
+    border-radius: 7px;
+    padding: 9px;
+  }
+}
+
+.quiztitle {
+  margin-top: 23.5px;
+  font-size: 26px;
+  font-weight: 600;
+  text-shadow: 1px 1px 0 rgb(10, 120, 153),
+    1px 1px 1px rgb(8, 98, 126);
+
+  &>p {
+    margin: 0px;
+  }
+
+  &>p>span {
+    text-shadow: none;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+    color: rgb(168, 230, 255);
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Okayfive - Home</title>
+  <link rel="stylesheet" href="style/main.css" />
+</head>
+
+<body>
+  <div class="pagecontainer">
+    <div class="navbar">
+      <div class="content_container">
+        <img src="okrendrender.png" class="brandlogo">
+        <ul class="navitems">
+          <a href="#1">
+            <li><span class="activeitem">Classroom</span></li>
+          </a>
+          <a href="#2">
+            <li>Learn</li>
+          </a>
+          <a href="#2">
+            <li>Games</li>
+          </a>
+        </ul>
+        <div class="contactnav">
+          <a href="#3">
+            Sign out
+          </a>
+        </div>
+        <div class="container" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contextbarbg pagecontainer">
+    <div class="content_container contextbar">
+      <div class="quiztitle">
+        <p>Multiplication Quiz <span>Third Grade</span></p>
+      </div>
+      <a href="#" class="returnlesson">
+        <div>Back to Lesson</div>
+      </a>
+    </div>
+  </div>
+</body>
+<script>
+  function myFunction(x) {
+    x.classList.toggle("change");
+  }
+</script>
+
+</html>
