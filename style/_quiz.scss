@@ -47,3 +47,164 @@
     color: rgb(168, 230, 255);
   }
 }
+
+.quizviewportbg {
+  height: 100%;
+}
+
+.quizviewport {
+  height: 100%;
+}
+
+.quizproblembox {
+  margin-top: 40px;
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+  color: black;
+  background-color: #fcfaf7;
+  box-shadow: inset 0 0 5px #818181;
+  border-radius: 20px;
+}
+
+.probleminfobar {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  color: grey;
+  user-select: none;
+  font-style: italic;
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &>.problemCLASS {
+    margin-left: auto;
+  }
+}
+
+.problemcontent {
+  display: Flex;
+  justify-content: space-evenly;
+
+  &>div {}
+}
+
+.problemPROBLEM {
+  width: 550px;
+  padding-top: 40px;
+  border-right: 1px solid rgb(182, 182, 182);
+}
+
+.problemDispTitle {
+  margin-top: 60px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.problemDispProblem {
+  text-align: center;
+  font-weight: normal;
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.problemDispEntry {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+
+  &>* {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  &>input {
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 6px;
+    width: 100px;
+    text-align: center;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  &>input::placeholder {
+    color: rgb(78, 78, 78);
+  }
+
+  &>a {
+
+    text-decoration: none;
+
+    &>div {
+      margin: auto;
+      color: white;
+      border-radius: 100%;
+      background-color: rgb(61, 161, 22);
+
+      padding: 8px;
+      margin-top: 6px;
+      width: 20px;
+    }
+  }
+}
+
+.problemSTEPS {
+  width: 550px;
+  margin-top: 50px;
+  margin-left: 60px;
+
+  &>ul {
+    margin-right: 70px;
+    list-style-type: none;
+
+    &>li {
+      font-size: 21px;
+      padding: 20px;
+      border-bottom: 1px solid rgb(211, 211, 211);
+
+      &::before {
+        content: "";
+      }
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+}
+
+.solutionTITLE {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  color: rgb(15, 15, 15);
+}
+
+.answerTITLE {
+  text-align: center;
+  @extend .solutionTITLE;
+}
+
+.answerANSWER {
+  padding: 20px;
+  font-size: 21px;
+  text-align: center;
+}
+
+.numbSo {
+  color: rgb(6, 83, 156);
+  font-weight: bold;
+}
+
+// .var1 {
+//   color: rgb(53, 98, 245);
+// }
+
+// .var2 {
+//   color: rgb(250, 66, 66);
+// }
