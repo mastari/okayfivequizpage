@@ -1,0 +1,291 @@
+.pageheader {
+  flex-direction: row;
+  color: rgb(31, 31, 31);
+  margin-top: 80px;
+  padding: 20px;
+  padding-bottom: 0px;
+
+  @media screen and (max-width:1000px) {
+    flex-direction: column;
+  }
+}
+
+
+
+.headerbutton {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(10, 53, 134);
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  width: 500px;
+  margin-top: 20px;
+
+  @media screen and (max-width:576px) {
+    width: 300px;
+  }
+
+  @media screen and (min-width:1000px) {
+    width: 600px;
+  }
+
+  background-color: rgb(15, 64, 155);
+}
+
+
+.buttoncont {
+  flex-direction: row;
+  justify-content: center;
+
+  &>a {
+    margin-top: 20px;
+    text-decoration: none;
+  }
+}
+
+.pagemid {
+  @extend .pageheader;
+  margin: 10px;
+  flex-direction: column;
+  color: white;
+}
+
+.pageheaderbg {
+  background-color: rgb(11, 162, 207);
+  width: 100%;
+  padding-top: 80px;
+
+  @media screen and (max-width:1000px) {
+    padding-top: 20px;
+  }
+
+  padding-bottom: 100px;
+}
+
+.pageheaderbg2 {
+  padding-top: 30px;
+  width: 100%;
+  background-color: #f1eee6;
+  padding-bottom: 120px;
+}
+
+.pageheaderbg3 {
+  width: 100%;
+  background-color: #e49732;
+  padding-bottom: 60px;
+}
+
+
+.leftpageheader {
+  width: 500px;
+  align-self: center;
+  padding-top: 40px;
+  color: white;
+
+  &>h1 {
+    line-height: 1.3em;
+    font-style: normal;
+    font-size: 45px;
+    color: white;
+    text-shadow: 1px 1px 0 rgb(7, 62, 165),
+      1px 1.5px 1.5px rgb(8, 70, 170);
+
+    @media screen and (max-width:1000px) {
+      font-size: 35px;
+      text-align: center;
+    }
+
+    @media screen and (max-width:800px) {
+      text-align: left;
+    }
+  }
+
+
+  @media screen and (max-width:1000px) {
+    width: 100%;
+    padding-top: 15px;
+  }
+
+
+  &>div {
+    line-height: 1.5em;
+    font-size: 20px;
+
+  }
+
+}
+
+.rightpageheader {
+  width: 500px;
+  margin-left: 50px;
+  flex-direction: column;
+  align-self: center;
+
+  &>img {
+    margin-top: 20px;
+    width: 100%;
+
+    @media screen and (max-width:576px) {
+      margin: 0px;
+    }
+  }
+
+  @media screen and (max-width:1000px) {
+    margin: 0px;
+  }
+
+  @media screen and (max-width:576px) {
+    width: 300px;
+  }
+}
+
+.ourmissioncontainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.ourmissiontitle {
+  text-align: center;
+  color: #2e2e2e;
+  padding: 30px;
+  font-size: 21px;
+  // text-shadow: 1px 1px 0 #0b9dca,
+  //   1px 1px 1px #88480c;
+
+  @media screen and (max-width:800px) {
+    font-size: 15.5px;
+    text-align: center;
+    padding: 0px;
+  }
+}
+
+.threesplit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+  @media screen and (max-width:1000px) {
+    flex-direction: column;
+  }
+
+  &>div {
+    width: 25%;
+    padding: 20px;
+    color: black;
+    background-color: #f7f5f0;
+    box-shadow: inset 0 0 5px #818181;
+    border-radius: 20px;
+
+
+    @media screen and (max-width:1000px) {
+      width: 75%;
+      align-self: center;
+      margin: 30px;
+    }
+  }
+
+  &>div>h2 {
+    text-align: center;
+    font-weight: 800;
+    color: rgb(1, 11, 27);
+
+    &>img {
+      width: 30px;
+      display: inline-flex;
+    }
+  }
+
+  &>div>p {
+    line-height: 2em;
+    color: rgb(2, 13, 34);
+  }
+}
+
+.demcontbox>a {
+  text-decoration: none;
+}
+
+.demcontbox>ul {
+  line-height: 3em;
+  list-style: none;
+
+  &>li:before {
+    color: green;
+    content: '☑  ';
+  }
+}
+
+.studentbutton {
+  color: rgb(255, 255, 255);
+  border: 0.5px solid #942020;
+  background-color: #cc1b1b;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.teacherbutton {
+  @extend .studentbutton;
+  border-color: #24500a;
+  background-color: #3a9107;
+}
+
+
+.parentbutton {
+  @extend .studentbutton;
+  border-color: #063580;
+  background-color: #0754cf;
+}
+
+.leftpagemidder {
+  @extend .leftpageheader;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+
+  &>img {
+    width: 300px;
+
+    @media screen and (max-width:1000px) {
+      font-size: 15.5px;
+      align-self: center;
+      width: 200px;
+    }
+  }
+}
+
+.rightpagemidder {
+  @extend .rightpageheader;
+  color: white;
+  font-size: 22px;
+  margin-left: 0px;
+  width: 50%;
+  text-shadow: 1px 1px 0 #8d5a07,
+    1px 1px 1px #9c5b07;
+
+  @media screen and (max-width:1000px) {
+    font-size: 20px;
+    align-self: center;
+    width: 100%;
+  }
+
+  &>div {
+    text-shadow: none;
+
+    @media screen and (max-width:1000px) {
+      width: 100%;
+    }
+  }
+}
+
+.midderbutton {
+  @extend .headerbutton;
+  background-color: rgb(240, 91, 4);
+  border-color: rgb(182, 71, 7);
+  border-width: 0.5px;
+  margin-top: 20px;
+}
