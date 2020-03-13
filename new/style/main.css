@@ -548,6 +548,8 @@ body {
 .contextbarbg {
   height: 75px;
   background-color: #0ba2cf;
+  -webkit-box-shadow: 1px 1px 2px #979797;
+          box-shadow: 1px 1px 2px #979797;
 }
 
 .okayfivebrand {
@@ -580,8 +582,11 @@ body {
   height: 14px;
   width: 60%;
   background-color: #f5b030;
-  -webkit-box-shadow: 1px 1px 0 #da9921, 1px 1px 1px #da9921;
-          box-shadow: 1px 1px 0 #da9921, 1px 1px 1px #da9921;
+  background: #f5b030;
+  background: -webkit-gradient(linear, left top, right top, from(#f88d46), to(#f1a415));
+  background: linear-gradient(90deg, #f88d46 0%, #f1a415 100%);
+  -webkit-box-shadow: 1px 1px 0 #cecece, 1px 1px 1px #dadada;
+          box-shadow: 1px 1px 0 #cecece, 1px 1px 1px #dadada;
 }
 
 .contextbar {
@@ -606,28 +611,75 @@ body {
   margin-left: auto;
 }
 
-.returnlesson > div {
-  border: 1px solid #cbf4ff;
+.returnlesson > .returnfull {
   border-radius: 4px;
-  padding: 9px;
+  padding: 11px;
+}
+
+@media screen and (max-width: 1250px) {
+  .returnlesson > .returnfull {
+    display: none;
+  }
+}
+
+.returnlesson > .returnmin {
+  border: none;
+  padding: 11px;
+  display: none;
+}
+
+@media screen and (max-width: 1250px) {
+  .returnlesson > .returnmin {
+    display: block;
+  }
 }
 
 .quiztitle {
-  margin-top: 23.5px;
   font-size: 26px;
   font-weight: 600;
   text-shadow: 1px 1px 0 #0a7899, 1px 1px 1px #08627e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.quiztitle > p {
-  margin: 0px;
+@media screen and (max-width: 1250px) {
+  .quiztitle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
-.quiztitle > p > span {
+.quiztitle > #qt {
+  margin-top: 23px;
+}
+
+@media screen and (max-width: 1250px) {
+  .quiztitle > #qt {
+    margin-top: 12px;
+  }
+}
+
+.quiztitle > #qst {
   text-shadow: none;
   font-weight: 400;
+  margin-top: 28px;
+  margin-left: 10px;
   font-size: 20px;
   color: #a8e6ff;
+}
+
+@media screen and (max-width: 1250px) {
+  .quiztitle > #qst {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
 }
 
 .quizviewport {
@@ -659,12 +711,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  color: grey;
+  color: #adadad;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  font-style: italic;
+  font-weight: thin;
   padding-top: 3px;
   padding-left: 10px;
   padding-right: 10px;
@@ -676,9 +728,23 @@ body {
 
 .problemcontent {
   display: Flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  padding-bottom: 15px;
+}
+
+@media screen and (max-width: 1250px) {
+  .problemcontent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .problemPROBLEM {
@@ -687,8 +753,16 @@ body {
   border-right: 1px solid #b6b6b6;
 }
 
+@media screen and (max-width: 1250px) {
+  .problemPROBLEM {
+    margin: auto;
+    border: none;
+    width: 100%;
+  }
+}
+
 .problemDispTitle {
-  margin-top: 60px;
+  margin-top: 70px;
   text-align: center;
   font-weight: 500;
   font-size: 25px;
@@ -770,11 +844,18 @@ body {
 .problemSTEPS {
   width: 550px;
   margin-top: 50px;
-  margin-left: 60px;
+}
+
+@media screen and (max-width: 1250px) {
+  .problemSTEPS {
+    margin: auto;
+    border: none;
+    width: 100%;
+    margin-top: 50px;
+  }
 }
 
 .problemSTEPS > ul {
-  margin-right: 70px;
   list-style-type: none;
 }
 
@@ -799,6 +880,14 @@ body {
   color: #0f0f0f;
 }
 
+@media screen and (max-width: 1250px) {
+  .solutionTITLE, .answerTITLE {
+    text-align: left;
+    margin-left: 38px;
+    margin-top: 30px;
+  }
+}
+
 .answerTITLE {
   text-align: center;
 }
@@ -810,7 +899,7 @@ body {
 }
 
 .numbSo {
-  color: #06539c;
+  color: #0e67bb;
   font-weight: bold;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,6 +1,7 @@
 .contextbarbg {
   height: $navheight;
   background-color: rgb(11, 162, 207);
+  box-shadow: 1px 1px 2px rgb(151, 151, 151);
 }
 
 .okayfivebrand {
@@ -30,8 +31,10 @@
   height: 14px;
   width: 60%;
   background-color: rgb(245, 176, 48);
-  box-shadow: 1px 1px 0 rgb(218, 153, 33),
-    1px 1px 1px rgb(218, 153, 33);
+  background: rgb(245, 176, 48);
+  background: linear-gradient(90deg, rgb(248, 141, 70) 0%, rgb(241, 164, 21) 100%);
+  box-shadow: 1px 1px 0 rgb(206, 206, 206),
+    1px 1px 1px rgb(218, 218, 218);
 }
 
 .contextbar {
@@ -49,29 +52,60 @@
   font-size: 20px;
   margin-top: 16px;
   color: rgb(255, 255, 255);
-  margin-left:auto;
+  margin-left: auto;
 
-  &>div {
-    border: 1px solid rgb(203, 244, 255);
+  &>.returnfull {
+    // border: 1px solid rgb(203, 244, 255);
     border-radius: 4px;
-    padding: 9px;
+    padding: 11px;
+
+    @media screen and (max-width : 1250px) {
+      display: none;
+    }
+  }
+
+  &>.returnmin {
+    border: none;
+    padding: 11px;
+    display: none;
+
+    @media screen and (max-width : 1250px) {
+      display: block;
+    }
   }
 }
 
 .quiztitle {
-  margin-top: 23.5px;
   font-size: 26px;
   font-weight: 600;
   text-shadow: 1px 1px 0 rgb(10, 120, 153),
     1px 1px 1px rgb(8, 98, 126);
+  display: flex;
+  flex-direction: row;
 
-  &>p {
-    margin: 0px;
+  @media screen and (max-width : 1250px) {
+    flex-direction: column;
   }
 
-  &>p>span {
+  &>#qt {
+    margin-top: 23px;
+
+    @media screen and (max-width : 1250px) {
+      margin-top: 12px;
+    }
+  }
+
+  &>#qst {
     text-shadow: none;
     font-weight: 400;
+    margin-top: 28px;
+    margin-left: 10px;
+
+    @media screen and (max-width : 1250px) {
+      margin-top: 0px;
+      margin-left: 0px;
+    }
+
     // font-style: italic;
     font-size: 20px;
     color: rgb(168, 230, 255);
@@ -97,9 +131,9 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
-  color: grey;
+  color: rgb(173, 173, 173);
   user-select: none;
-  font-style: italic;
+  font-weight: thin;
   padding-top: 3px;
   padding-left: 10px;
   padding-right: 10px;
@@ -111,22 +145,35 @@
 
 .problemcontent {
   display: Flex;
+  flex-direction: row;
   justify-content: space-evenly;
+  padding-bottom: 15px;
 
-  &>div {}
+  @media screen and (max-width : 1250px) {
+    flex-direction: column;
+  }
+
 }
 
 .problemPROBLEM {
+
+  @media screen and (max-width : 1250px) {
+    margin: auto;
+    border: none;
+    width: 100%;
+  }
+
   width: 550px;
   padding-top: 40px;
   border-right: 1px solid rgb(182, 182, 182);
 }
 
 .problemDispTitle {
-  margin-top: 60px;
+  margin-top: 70px;
   text-align: center;
   font-weight: 500;
   font-size: 25px;
+
 }
 
 .problemDispProblem {
@@ -143,12 +190,14 @@
   justify-content: center;
   margin-top: 20px;
 
+
   &>* {
     margin-left: 5px;
     margin-right: 5px;
   }
 
   &>input {
+
     // border: 1px solid rgb(180, 180, 180);
     border: none;
 
@@ -182,21 +231,30 @@
       padding: 8px;
       margin-top: 6px;
       width: 20px;
+
     }
   }
 }
 
 .problemSTEPS {
+  @media screen and (max-width : 1250px) {
+    margin: auto;
+    border: none;
+    width: 100%;
+    margin-top: 50px;
+  }
+
   width: 550px;
   margin-top: 50px;
-  margin-left: 60px;
 
   &>ul {
-    margin-right: 70px;
+    // padding: 0px;
     list-style-type: none;
 
     &>li {
       font-size: 21px;
+      // margin-left: 20px;
+      ;
       padding: 20px;
       border-bottom: 1px solid rgb(211, 211, 211);
 
@@ -216,6 +274,12 @@
   font-weight: bold;
   font-size: 25px;
   color: rgb(15, 15, 15);
+
+  @media screen and (max-width : 1250px) {
+    text-align: left;
+    margin-left: 38px;
+    margin-top: 30px;
+  }
 }
 
 .answerTITLE {
@@ -230,7 +294,7 @@
 }
 
 .numbSo {
-  color: rgb(6, 83, 156);
+  color: rgb(14, 103, 187);
   font-weight: bold;
 }
 
