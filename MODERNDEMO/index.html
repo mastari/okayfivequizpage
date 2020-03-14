@@ -11,7 +11,10 @@
 </head>
 
 <body>
-
+  <audio id="myAudio">
+    <source src="correct1.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
   <div class="contextbarbg pagecontainer">
     <div class="content_container contextbar">
       <div class="okayfivebrand"><img src="whiteok.png" alt=""></div>
@@ -65,12 +68,17 @@
           <div class="problemSTEPS">
             <div class="solutionTITLE">Solution</div>
             <ul>
-              <li>We are asked 4 x 5</li>
-              <li>This is the same as: <br /><span class="numbSo">5</span> + <span class="numbSo">5</span> + <span
+              <li id="step1">We are asked 4 x 5</li>
+              <li id="step2">This is the same as: <br /><span class="numbSo">5</span> + <span class="numbSo">5</span> + <span
                   class="numbSo">5</span> + <span class="numbSo">5</li>
-              <li>Adding all the <span class="numbSo">5</span>'s you get <strong>20</strong></li>
-              <li>So, 4 x 5 = 20</li>
+              <li id="step3">Adding all the <span class="numbSo">5</span>'s you get <strong>20</strong></li>
+              <li id="step4">So, 4 x 5 = 20</li>
             </ul>
+          </div>
+          <div class="quizCOMPLETE">
+            <div>Wow!</div>
+            <h1><span class="finalscore">-z</span>/10</h1>
+            <div>Keep up the great work!</div>
           </div>
         </div>
       </div>

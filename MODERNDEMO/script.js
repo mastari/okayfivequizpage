@@ -1,5 +1,8 @@
 var varONE, varTWO, answer;
 var save, save2;
+var correctDING;
+var progressScore = 0;
+var probWrong = 0;
 
 function generateAndDisplay() {
   varONE = Math.floor(Math.random() * 13);
@@ -11,7 +14,6 @@ function generateAndDisplay() {
 
 function getFunSubmit() {
   var funSubmits = [
-    "flipInX",
     "bounce",
     "pulse",
     "jackInTheBox",
@@ -40,6 +42,33 @@ function showSolution() {
     .setAttribute("style", "display:none;");
   document.getElementsByClassName("answerbox")[0].focus();
   document.getElementsByClassName("answerbox")[0].select();
+
+  let small, large;
+  if (varONE > varTWO) {
+    large = varONE;
+    small = varTWO;
+  } else {
+    large = varTWO;
+    small = varONE;
+  }
+  
+  
+
+  //print steps
+  document.querySelector("#step1").innerHTML = `We are asked ${varONE} x ${varTWO}`
+  let string="";
+  for(var x = 0; x < small-1; x++) {
+    string+=`<span class="numbSo">${large}</span> + `
+  }
+  if(small !== 0) {
+    string += `<span class="numbSo">${large}</span>`
+  } else {
+    string+=`<span class="numbSo">Nothing!</span>`
+  }
+  document.querySelector("#step2").innerHTML = `This is the same as <br/>${string}`
+  document.querySelector("#step3").innerHTML = `Adding all the <span class="numbSo">${large}</span>'s you get <strong>${answer}</strong>`
+  document.querySelector("#step4").innerHTML = `So, ${varONE} x ${varTWO} = ${answer}`
+  
 }
 
 function hideSolution() {
@@ -52,6 +81,9 @@ function hideSolution() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector(".progressmarker").setAttribute("style", `width:${progressScore}%`)
+  correctDING = document.getElementById("myAudio"); 
+
   var save = document.querySelector(".answerbox").getAttribute("style");
   var save2 = document
     .querySelector(".problemDispProblem")
@@ -61,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
     .getElementsByClassName("answerbox")[0]
     .addEventListener("keypress", function(event) {
       if (event.keyCode == 13) {
-        event.preventDefault();
+        // event.preventDefault();
         submitAnswer();
       }
     });
@@ -75,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function submitAnswer() {
+  var originalScore = progressScore;
   var userAnswer = document.getElementsByClassName("answerbox")[0].value;
   console.log(userAnswer);
 
@@ -88,6 +121,8 @@ function submitAnswer() {
     document
       .querySelector(".problemDispProblem")
       .setAttribute("style", "color: green;");
+      correctDING.play();
+      progressScore+=10;
     animateCSS(".answerbox", getFunSubmit(), function() {
       hideSolution();
       document.querySelector(".answerbox").setAttribute("style", save);
@@ -105,11 +140,32 @@ function submitAnswer() {
     document
       .querySelector(".answerbox")
       .setAttribute("style", "border: 1px solid red; color:red;");
-    animateCSS(".answerbox", "hinge", function() {
+      probWrong++;
+    animateCSS(".answerbox", "rotateOut", function() {
       document.querySelector(".answerbox").setAttribute("style", save);
       document.getElementsByClassName("answerbox")[0].focus();
       document.getElementsByClassName("answerbox")[0].select();
     });
+  }
+  if(progressScore !== originalScore) {
+    var id = setInterval(frame, 1);
+    function frame() {
+    if (originalScore >= progressScore) {
+      clearInterval(id);
+      //quiz completed!!! Woooo
+      if(progressScore >= 100) {
+        alert("great job!")
+        document.querySelector('.finalscore').innerHTML = 10 - probWrong;
+        document.querySelector('.problemPROBLEM').setAttribute("style","display:none;")
+        document.querySelector('.problemSTEPS').setAttribute("style","display:none;")
+        document.querySelector('.problemOPTIONS').setAttribute("style","display:none;")
+        document.querySelector('.quizCOMPLETE').setAttribute("style","display:flex;")
+      }
+    } else {
+      originalScore+=0.1;
+      document.querySelector(".progressmarker").setAttribute("style", `width:${originalScore}%`)
+    }
+  }
   }
 }
 
