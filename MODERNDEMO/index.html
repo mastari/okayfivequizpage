@@ -4,8 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Okayfive - Home</title>
+  <title>Multiplication Quiz - OK5</title>
   <link rel="stylesheet" href="style/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -41,8 +43,8 @@
             <div class="problemDispTitle">Multiply</div>
             <div class="problemDispProblem"><span class="var1">4</span> x <span class="var2">5</span></div>
             <div class="problemDispEntry">
-              <input type="text" placeholder="" />
-              <a href="#submit">
+              <input type="text" class="answerbox fast" />
+              <a href="#" class="answerbutton">
                 <div>→</div>
               </a>
             </div>
@@ -75,10 +77,5 @@
     </div>
   </div>
 </body>
-<script>
-  function myFunction(x) {
-    x.classList.toggle("change");
-  }
-</script>
 
 </html>

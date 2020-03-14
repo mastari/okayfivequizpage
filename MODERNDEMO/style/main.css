@@ -867,7 +867,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  display: relative;
   border-left: 1px solid #b6b6b6;
 }
 
@@ -885,8 +884,11 @@ body {
 }
 
 .problemSTEPS {
-  display: relative;
   display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border-left: 1px solid #b6b6b6;
   width: 100%;
   margin: auto;

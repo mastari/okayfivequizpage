@@ -274,13 +274,12 @@
     margin-top: 30px;
   }
 
-  display:relative;
   border-left: 1px solid rgb(182, 182, 182);
 }
 
 .problemSTEPS {
-  display: relative;
   display: none;
+  flex-direction: column;
   border-left: 1px solid rgb(182, 182, 182);
 
   @media screen and (max-width : 1250px) {
@@ -345,10 +344,10 @@
   font-weight: bold;
 }
 
-// .var1 {
-//   color: rgb(53, 98, 245);
-// }
+.var1 {
+  // color: rgb(53, 98, 245);
+}
 
-// .var2 {
-//   color: rgb(250, 66, 66);
-// }
+.var2 {
+  // color: rgb(250, 66, 66);
+}
