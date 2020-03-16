@@ -1,6 +1,7 @@
-$navheight: 75px;
+$navheight: 55px;
 
 .contextbarbg {
+  margin-top: 75px;
   height: $navheight;
   background-color: rgb(11, 162, 207);
   box-shadow: 1px 1px 2px rgb(151, 151, 151);
@@ -17,7 +18,9 @@ $navheight: 75px;
 }
 
 .quiztitle {
-  font-size: 26px;
+  justify-content: center;
+  width:100%;
+  font-size: 24px;
   font-weight: 600;
   color: white;
   text-shadow: 1px 1px 0 rgb(10, 120, 153),
@@ -26,30 +29,26 @@ $navheight: 75px;
   flex-direction: row;
 
   @media screen and (max-width : 1250px) {
-    flex-direction: column;
+    // flex-direction: column;
   }
 
   &>#qt {
-    margin-top: 23px;
+    margin-top:14px;
 
-    @media screen and (max-width : 1250px) {
-      margin-top: 12px;
-    }
+    // @media screen and (max-width : 1250px) {
+    //   margin-top: 12px;
+    // }
   }
 
   &>#qst {
     text-shadow: none;
     font-weight: 400;
-    margin-top: 28px;
+    margin-top: 18px;
     margin-left: 10px;
 
-    @media screen and (max-width : 1250px) {
-      margin-top: 0px;
-      margin-left: 0px;
-    }
 
     // font-style: italic;
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(168, 230, 255);
   }
 }
@@ -57,8 +56,8 @@ $navheight: 75px;
 
 a.returnlesson {
   text-decoration: none;
-  font-size: 20px;
-  margin-top: 16px;
+  font-size: 18px;
+  margin-top: 2px;
   color: rgb(255, 255, 255);
   margin-left: auto;
 
