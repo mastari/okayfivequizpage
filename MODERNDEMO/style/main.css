@@ -864,7 +864,7 @@ body {
   width: 100px;
   font-weight: bold;
   height: 100px;
-  border-radius: 20px;
+  border-radius: 100%;
   border: 2px solid #14aad8;
   color: #14aad8;
   text-align: center;

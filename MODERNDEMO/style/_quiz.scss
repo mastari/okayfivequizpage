@@ -169,16 +169,18 @@
 }
 
 .quizCOMPLETE {
-  display:none;
+  display: none;
   flex-direction: column;
   text-align: center;
-  margin:auto;
+  margin: auto;
+
   &>h1 {
     color: rgb(10, 167, 10);
-    font-size: 55px; 
+    font-size: 55px;
   }
+
   &>div {
-    font-size: 20px; 
+    font-size: 20px;
     color: rgb(2, 66, 2);
   }
 }
@@ -254,9 +256,9 @@
 
 .getskip {
   width: 100px;
-  font-weight:bold;
+  font-weight: bold;
   height: 100px;
-  border-radius: 20px;
+  border-radius: 100%;
   border: 2px solid rgb(20, 170, 216);
   color: rgb(20, 170, 216);
   text-align: center;
