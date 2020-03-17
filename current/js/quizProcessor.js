@@ -6,7 +6,7 @@ function serviceProblem(index) {
     console.log("[ERR]: Problem Index Out Of Range");
     return false;
   }
-  console.log(`Servicing Problem #${index + 1}, ${problem.type}`);
+  console.log(`[Servicing] Problem #${index + 1}, ${problem.type}`);
   let t;
   switch (problem.type) {
     case "CCSS.3.OI.MULT":
@@ -26,23 +26,57 @@ function serviceProblem(index) {
 }
 
 function submitProblem(problem, answer, correct) {
-  quizSession.problemSubmits.push({ problem, answer, correct });
+  quizSession.problemSubmits.push({
+    problem,
+    answer,
+    correct,
+    index: quizSession.problemIndex
+  });
   if (correct) {
-    pageAssets.correctDing.play();
+    // pageAssets.correctDing.play();
     updateProgressbar();
-    quizSession.completedIndices.push(quizSession.problemIndex);
   }
 }
 
 function requestSkip() {
   //Do some logging to keep track of completed
+  console.log(`[Skipping] Problem #${quizSession.problemIndex + 1}`);
+  quizSession.problemIndex++;
   nextProblem();
 }
 
 function nextProblem() {
-  $(".problemcontent").html("");
-  quizSession.problemIndex++;
-  serviceProblem(quizSession.problemIndex);
+  let correctArray = [];
+  for (let i = 0; i < quizSession.problemSubmits.length; i++) {
+    if (quizSession.problemSubmits[i].correct)
+      correctArray.push(quizSession.problemSubmits[i].index);
+  }
+  var todo = -1;
+  for (
+    let i = quizSession.problemIndex;
+    i < clientObject.quizProblems.length;
+    i++
+  ) {
+    if (!correctArray.includes(i)) {
+      todo = i;
+      break;
+    }
+  }
+  if (todo == -1) {
+    for (let i = 0; i < clientObject.quizProblems.length; i++) {
+      if (!correctArray.includes(i)) {
+        todo = i;
+        break;
+      }
+    }
+  }
+  if (todo == -1) {
+    console.log("[COMPLETE]");
+  } else {
+    quizSession.problemIndex = todo;
+    $(".problemcontent").html("");
+    serviceProblem(quizSession.problemIndex);
+  }
 }
 
 function updateProgressbar() {

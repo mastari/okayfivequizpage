@@ -30,7 +30,6 @@ class smallInputBox {
   animate(success, animationCallback) {
     if (success) {
       $(".answerbox").blur();
-      console.log("correct!");
       $(".answerbox").css({ border: "1px solid green" });
       animationCallback(true, true);
       animateCSS(".answerbox", this.getFunSubmit(), function() {

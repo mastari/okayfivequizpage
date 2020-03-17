@@ -22,8 +22,7 @@ function getLastSession() {
   //TODO: Controller sends state of last session
   return {
     problemIndex: 0,
-    problemSubmits: [],
-    completedIndices: []
+    problemSubmits: []
   };
 }
 
