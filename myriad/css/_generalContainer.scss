@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i&display=swap');
+@import url("https://use.typekit.net/thy6bhp.css");
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  font-family: proxima-nova, sans-serif;
+  zoom: 100%;
+  background-color: #f8f6f1;
+}
+
+.pagecontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content_container {
+  display: flex;
+  // border: 1px solid rgb(233, 233, 233);
+
+  @media screen and (min-width : 0px) {
+    width: 90vw;
+  }
+
+  @media screen and (min-width : 576px) {
+    width: 576px;
+  }
+
+  @media screen and (min-width : 800px) {
+    width: 750px;
+  }
+
+  @media screen and (min-width : 1000px) {
+    width: 950px;
+  }
+
+  @media screen and (min-width : 1250px) {
+    width: 1200px;
+  }
+}

@@ -1,0 +1,22 @@
+.progressbarbg {
+  height: 40px;
+  justify-content: flex-start;
+}
+
+.progressbar {
+  margin-top: 13px;
+  background-color: rgb(226, 226, 226);
+  height: 15px;
+  border-radius: 10px;
+}
+
+.progressmarker {
+  border-radius: 10px;
+  height: 14px;
+  width: 0%;
+  background-color: rgb(245, 176, 48);
+  background: rgb(245, 176, 48);
+  background: linear-gradient(90deg, rgb(248, 141, 70) 0%, rgb(241, 164, 21) 100%);
+  box-shadow: 1px 1px 0 rgb(206, 206, 206),
+    1px 1px 1px rgb(218, 218, 218);
+}

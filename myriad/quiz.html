@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Okayfive Quiz [prodFramework]</title>
+  <link rel="stylesheet" href="css/master.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typescript/3.8.3/typescript.js"></script>
+  <script src="js/clientObject.js"></script>
+  <script src="js/problemBlueprints/components/smallInputBox.js"></script>
+  <script src="js/problemBlueprints/components/skipAndSolution.js"></script>
+  <script src="js/quizProcessor.js"></script>
+  <script src="js/problemBlueprints/CCSS3OIADD.js"></script>
+  <script src="js/problemBlueprints/CCSS3OIMULT.js"></script>
+  <script src="js/problemBlueprints/KCCA1EF.js"></script>
+  <script src="js/ultisketch.js"></script>
+  <script src="js/load.js"></script>
+</head>
+
+<body>
+  <audio id="pageAudio" preload="auto">
+    <source src="assets/correct1.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="pagecontainer">
+    <div class="navbar">
+      <div class="content_container">
+        <img src="assets/okrendrender.png" class="brandlogo">
+        <ul class="navitems">
+          <a href="#2">
+            <li><span class="activeitem">Classroom</span></li>
+          </a>
+          <a href="#2">
+            <li>Learn</li>
+          </a>
+          <a href="#2">
+            <li>Games</li>
+          </a>
+        </ul>
+        <div class="contactnav">
+          <a href="#3">
+            Sign out
+          </a>
+        </div>
+        <div class="container" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--NAVIGATION HEADER-->
+  <div class="contextbarbg pagecontainer">
+    <div class="content_container contextbar">
+      <!-- <div class="okayfivebrand"><img src="assets/whiteok.png" alt=""></div> -->
+      <div class="quiztitle">
+        <div id="qt">Quiz Title</div>
+        <div id="qst">Grade Level</div>
+      </div>
+    </div>
+  </div>
+  <!--QUIZ PROGRESS BAR-->
+  <div class="progressbarbg pagecontainer">
+    <div class="content_container progressbar">
+      <div class="progressmarker"></div>
+    </div>
+  </div>
+  <!--QUIZ VIEW-->
+
+  <div class="pagecontainer quizviewportbg">
+    <div class="content_container quizviewport">
+      <div class="quizproblembox">
+        <div class="probleminfobar">
+          <div class="problemID">CCSS.OA.XXXX</div>
+          <div class="problemCLASS">Grade X</div>
+        </div>
+        <div class="problemcontent"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

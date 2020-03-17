@@ -1,0 +1,221 @@
+.problemPROBLEM {
+  @media screen and (max-width : 1250px) {
+    margin-top: 50px;
+    border: none;
+    width: 100%;
+  }
+
+  width: 100%;
+  margin:auto;
+}
+
+.problemDispTitle {
+  text-align: center;
+  font-weight: 500;
+  font-size: 25px;
+
+}
+
+.problemDispProblem {
+  text-align: center;
+  font-weight: normal;
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.problemDispEntry {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+
+
+  &>* {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  &>input {
+
+    // border: 1px solid rgb(180, 180, 180);
+    border: none;
+
+    border-top: 1px solid rgb(199, 199, 199);
+    border-left: 1px solid rgb(199, 199, 199);
+    box-shadow: 1px 1px 0 rgb(187, 187, 187),
+      1px 1px 1px rgb(197, 197, 197);
+    border-radius: 3px;
+    width: 100px;
+    text-align: center;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  &>input::placeholder {
+    color: rgb(78, 78, 78);
+  }
+
+  &>a {
+
+    text-decoration: none;
+
+    &>div {
+      margin: auto;
+      color: white;
+      border-radius: 100%;
+      background-color: rgb(7, 160, 7);
+      box-shadow: 1px 1px 0 rgb(50, 141, 14),
+        1px 1px 1px rgb(50, 141, 14);
+      padding: 8px;
+      margin-top: 6px;
+      width: 20px;
+
+      &:hover {
+        margin-top: 5px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(6, 126, 6);
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+
+.getskip {
+  width: 100px;
+  font-weight: bold;
+  height: 100px;
+  border-radius: 100%;
+  background-color: rgb(7, 160, 7);
+  border: 1px solid rgb(7, 160, 7);
+  color: rgb(255, 255, 255);
+  text-align: center;
+
+  &>div {
+    margin-top: 42px;
+  }
+
+  &:hover {
+    color: rgb(7, 160, 7);
+    background: none;
+  }
+}
+
+.gethelp {
+  @extend .getskip;
+  background: none;
+  border-color: rgb(141, 141, 141);
+  color: rgb(141, 141, 141);
+
+  &:hover {
+    color: black;
+  }
+}
+
+.problemOPTIONS {
+  width: 600px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+
+  &>* {
+    margin: 40px;
+    text-decoration: none;
+  }
+
+  @media screen and (max-width : 1250px) {
+    width: 100%;
+    border: none;
+    margin-top: 30px;
+  }
+
+  border-left: 1px solid rgb(182, 182, 182);
+}
+
+.problemSTEPS {
+  display: none;
+  flex-direction: column;
+  border-left: 1px solid rgb(182, 182, 182);
+
+  @media screen and (max-width : 1250px) {
+    margin: auto;
+    border: none;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  width: 100%;
+  margin: auto;
+
+  &>ul {
+    // padding: 0px;
+    list-style-type: none;
+
+    &>li {
+      font-size: 21px;
+      // margin-left: 20px;
+      ;
+      padding: 20px;
+      border-bottom: 1px solid rgb(211, 211, 211);
+
+      &::before {
+        content: "";
+      }
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+}
+
+.solutionTITLE {
+  margin-left: 38px;
+  margin-top: 30px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+  color: rgb(15, 15, 15);
+  padding-top: 0px;
+
+  @media screen and (max-width : 1250px) {
+    text-align: left;
+  }
+}
+
+a.hideSolution {
+  text-decoration: none;
+  color: black;
+  margin: auto;
+  text-align: center;
+  border: 1px solid rgb(131, 131, 131);
+  border-radius: 20px;
+  padding: 20px;
+  width: 200px;
+}
+
+.answerTITLE {
+  text-align: center;
+  @extend .solutionTITLE;
+}
+
+.answerANSWER {
+  padding: 20px;
+  font-size: 21px;
+  text-align: center;
+}
+
+.numbSo {
+  color: rgb(14, 103, 187);
+  font-weight: bold;
+}
+
+.var1 {
+  // color: rgb(53, 98, 245);
+}
+
+.var2 {
+  // color: rgb(250, 66, 66);
+}
